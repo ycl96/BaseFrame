@@ -9,3 +9,8 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+
+logging:
+  config: classpath:logback.xml
+  level:
+    com.ycl.dao.mapper: trace
