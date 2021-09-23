@@ -13,9 +13,9 @@ import org.springframework.data.elasticsearch.annotations.Field;
  */
 @Document(indexName = "test_spring")
 public class EsTestEntity {
-    @Id
-    private int id;
-    @Field
+//    @Id
+//    private int id;
+//    @Field
 
 }
 

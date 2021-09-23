@@ -12,10 +12,10 @@ import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
  * @version: :
  */
 public class EsUtils {
-    @Autowired
-    @Qualifier(value ="elasticsearchTemplate")
-    private ElasticsearchRestTemplate elasticsearchRestTemplate;
-    public boolean createIndex () {
-        elasticsearchRestTemplate
-    }
+//    @Autowired
+//    @Qualifier(value ="elasticsearchTemplate")
+//    private ElasticsearchRestTemplate elasticsearchRestTemplate;
+//    public boolean createIndex () {
+//        elasticsearchRestTemplate
+//    }
 }
