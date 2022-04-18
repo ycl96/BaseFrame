@@ -1,0 +1,26 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: test-consumer
+dubbo:
+  application:
+    id: test-consumer
+    name: test-consumer
+    owner: ycl
+    organization: ycl
+    environment: test
+  protocol:
+    port: 21881
+    name: dubbo
+    host: 127.0.0.1
+  registry:
+    address: 127.0.0.1:2181
+    timeout: 2000
+    id: r-a
+    group: dubbo
+    protocol: zookeeper
+  scan:
+    base-packages: com.ycl
+  consumer:
+    registry-ids: r-a

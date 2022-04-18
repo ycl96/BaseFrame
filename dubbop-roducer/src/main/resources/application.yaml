@@ -1,0 +1,43 @@
+server:
+  port: 9104
+spring:
+  application:
+    name: test-provider
+dubbo:
+  application:
+    id: test-provider
+    name: test-provider
+    organization: ycl
+    environment: test
+    owner: ycl
+  protocol:
+#   协议id，可以再service中引用
+#   id: my-protocol
+
+    name: dubbo
+    port: 21880
+  registry:
+    address: 127.0.0.1:2181
+#    注册中心请求超时时间
+    timeout: 20000
+#    用于 service 或者 reference 引用
+    id: r-a
+    group: mlgb
+    protocol: zookeeper
+  #    登录注册中心的用户名和密码
+#    username: aaa
+#    password: aaa
+#    用于指定 网络传输方式，netty 或者 mina
+#    transporter: netty
+#    使用文件缓存注册中心地址列表及服务提供者列表，应用重启时将基于此文件恢复。
+#    file: classpath:registry-cache.log
+#    是否向注册中心注册服务，如果设置为false将只订阅，不注册。
+#    register: true
+#    是否向注册中心订阅服务，如果设置为false将只注册，不订阅。
+#    subscribe: true
+#    是否动态注册，如果为false, 注册后将显示disable状态，需人工启用，并且服务提供者停止时，也不会自动取消注册，需要人工禁用。
+#    dynamic: true
+#  scan:
+#    base-packages: com.ycl
+  provider:
+    registry: r-a
